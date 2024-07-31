@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const personajeSchema = new mongoose.Schema({
+const astronautaSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
   edad: { type: Number, required: true },
   casa: { type: String, required: true },
@@ -9,6 +9,6 @@ const personajeSchema = new mongoose.Schema({
   imagen: { type: String, default: '' } // Ruta de la imagen
 });
 
-const Personaje = mongoose.model('Personaje', personajeSchema);
+const Astronauta = mongoose.model('Astronauta', astronautaSchema);
 
-module.exports = Personaje;
+module.exports = Astronauta;
