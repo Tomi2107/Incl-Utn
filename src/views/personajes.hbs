@@ -1,0 +1,26 @@
+
+<section>
+    <h1>Astronautas</h1>
+
+      {{#each personajes}}
+       
+
+<div class="card" style="width: 20rem;">
+  <div class="containerCard">
+          {{#if imagen}}
+          <img src="./uploads/{{imagen}}" alt="{{nombre}}" style="max-width: 150px; height: 200px">
+          {{/if}}
+  <div class="card-body">
+    <h2>{{nombre}}</h2>
+          <p>Edad: {{edad}}</p>
+          <p>Casa: {{casa}}</p>
+          <p>Rol: {{rol}}</p>
+          <a href="/personajes/edit/{{this._id}}">Editar</a>
+          <a href="/personajes/delete/{{this._id}}">Eliminar</a>
+  </div>
+</div>
+</div>
+
+      {{/each}}
+
+  </section>
