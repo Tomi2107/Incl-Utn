@@ -4,19 +4,18 @@
 
       {{#each personajes}}
        
-
-<div class="card" style="width: 20rem;">
-  <div class="containerCard">
+<div class="row">
+  <div class="col-md-2 mb-3">
           {{#if imagen}}
           <img src="./uploads/{{imagen}}" alt="{{nombre}}" style="max-width: 150px; height: 200px">
           {{/if}}
   <div class="card-body">
     <h2>{{nombre}}</h2>
           <p>Edad: {{edad}}</p>
-          <p>Casa: {{casa}}</p>
+          <p>Poder: {{casa}}</p>
           <p>Rol: {{rol}}</p>
-          <a href="/personajes/edit/{{this._id}}">Editar</a>
-          <a href="/personajes/delete/{{this._id}}">Eliminar</a>
+          <a href="/personajes/edit/{{this._id}}" class="btn btn-warning">Editar</a>
+          <a href="/personajes/delete/{{this._id}}" class="btn btn-danger">Eliminar</a>
   </div>
 </div>
 </div>

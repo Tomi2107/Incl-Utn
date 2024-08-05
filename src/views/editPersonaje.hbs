@@ -1,18 +1,20 @@
 <h1>Editar Astronauta</h1>
+<div class="astronauta">
 <form
   action="/personajes/edit/{{personaje._id}}"
   method="POST"
   enctype="multipart/form-data"
 >
   <label>Nombre:</label>
-  <input type="text" name="nombre" value="{{personaje.nombre}}" required />
+  <input type="text" name="nombre" id="nombre" value="{{personaje.nombre}}" required /><br><br>
   <label>Edad:</label>
-  <input type="number" name="edad" value="{{personaje.edad}}" required />
-  <label>Casa:</label>
-  <input type="text" name="casa" value="{{personaje.casa}}" required />
+  <input type="number" name="edad" id="edad" value="{{personaje.edad}}" required /><br><br>
+  <label>Poder:</label>
+  <input type="text" name="casa" id="casa" value="{{personaje.casa}}" required /><br><br>
   <label>Rol:</label>
-  <input type="text" name="rol" value="{{personaje.rol}}" required />
+  <input type="text" name="rol" id="rol" value="{{personaje.rol}}" required /><br><br>
   <label>Imagen:</label>
-  <input type="file" name="imagen" />
-  <button type="submit">Actualizar</button>
+  <input type="file" name="imagen" /><br><br>
+  <button type="submit" class="btn btn-warning">Actualizar</button>
+  </div>
 </form>

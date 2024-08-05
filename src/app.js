@@ -33,8 +33,8 @@ app.use("/personajes", personajesRouter);
 app.get("/", (req, res) => {
   res.render("index", {
     layout: "layouts/main", 
-    title: "Inicio",
-    message: "Bienvenidos a nuestra aplicación de carga de archivos",
+    title: "Astronautas",
+    message: "Bienvenidos a nuestra aplicación dedicada a los Astronautas",
   });
 });
 
@@ -42,7 +42,7 @@ app.get("/usuarios", (req, res) => {
   res.render("usuarios", {
     layout: "layouts/main", 
     title: "Personajes",
-    message: "Lista de personajes de Harry pooter",
+    message: "Lista de Astronautas",
   });
 });
 
