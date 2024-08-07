@@ -1,29 +1,38 @@
- <div class="title2">
-<h1 class="title">Astronautas</h1>
-    <br><br>
-</div>
+<div class="containerAtronautas">
+  <h1 class="title">Astronautas</h1>
 
-<section> 
- 
-<div class="row row-cols-1 row-cols-md-3 g-4"></div>
-      {{#each personajes}}
-       
-<div class="col">
-  <div class="card h-100">
+<section>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {{#each personajes}}
+
+      <div class="col">
+        <div class="card h-100">
           {{#if imagen}}
-          <img src="./uploads/{{imagen}}" alt="{{nombre}}" class="card-img-top" >
+            <img
+              src="./uploads/{{imagen}}"
+              alt="{{nombre}}"
+              class="card-img-top"
+            />
           {{/if}}
-  <div class="card-body">   
-    <h2 class="card-title">{{nombre}}</h2>
-          <p class="card-text">Edad: {{edad}}</p>
-          <p class="card-text">Poder: {{casa}}</p>
-          <p class="card-text">Rol: {{rol}}</p>
-          <a href="/personajes/edit/{{this._id}}" class="btn btn-warning">Editar</a>
-          <a href="/personajes/delete/{{this._id}}" class="btn btn-danger">Eliminar</a>
-  </div>
-</div>
-</div>
+          <div class="card-body">
+            <h2 class="card-title">{{nombre}}</h2>
+            <p class="card-text">Edad: {{edad}}</p>
+            <p class="card-text">Poder: {{casa}}</p>
+            <p class="card-text">Rol: {{rol}}</p>
+            <a
+              href="/personajes/edit/{{this._id}}"
+              class="btn btn-warning"
+            >Editar</a>
+            <a
+              href="/personajes/delete/{{this._id}}"
+              class="btn btn-danger"
+            >Eliminar</a>
+          </div>
+        </div>
+      </div>
 
-      {{/each}}
+    {{/each}}
+  </div>
+</section>
 </div>
-  </section>
