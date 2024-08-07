@@ -20,8 +20,11 @@ body {
 }
 
 .container {
+  display:flex;
+  flex-direction: row;
   margin: 2rem;
   padding: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #e06fef;
   border-radius: 8px;
 }
@@ -42,6 +45,7 @@ h1 {
   width: 40%;
   display:flex;
   margin: auto;
+  padding: 15px;
 }
 .nav {
   background-color: #797575;
@@ -88,35 +92,56 @@ h1 {
 .button:hover {
   background-color: #c30052;
 }
-.container{
+.container2{
   width: 90%;
   height: 70%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
+  border: 1px solid rgb(65, 12, 117);
+} 
 .astronauta{
-   display: flex;
-   flex-direction: column;
-  align-items: center;
+  border: 1px solid rgb(65, 12, 117);
   margin-top: 3em;
   background-color: antiquewhite;
-  padding: 30px 0px 30px 0px;
-
+  padding: 30px 40px 30px 40px;
 }
 input{
 padding-left:50px;
 margin: 50px;
 }
-#nombre{
-  margin-left: 10px;
-}
-#edad{
-  margin-left: 30px;
-}
+#nombre{  margin-left: 10px; }
+#edad{  margin-left: 30px; }
 #rol{  margin-left: 42px; }
 #casa{  margin-left: 25px;}
+h1{
+  display: flex;
+  text-align: center;
+}
+section{
+  display:flex;
+  flex-flow: wrap;
+}
 
-
+.containerCard{ 
+ display: flex;
+  border: 2px solid rgb(65, 12, 117);
+  padding: 40px;
+  margin: 1%;
+  justify-content: center;
+  
+}
+.card-img-top{
+  width: 100%;
+  height: 90%;
+}
+.card{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  border-radius: 10%;
+  border: 1px solid rgb(65, 12, 117);
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(249, 215, 170);
+}
 
 footer{
   background-color: #797575;
@@ -127,31 +152,3 @@ footer{
   bottom: 0;
   width: 100%;
 }
-.col-md-2{
-  border: 1px solid rebeccapurple;
-  border-radius: 10%;
-  margin: 5px;
-  padding: 15px 10px;
-  background-color: rgb(249, 215, 170);
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
- 
-  
-}
-.col-sm-3{
-  border: 1px solid rgb(61, 228, 250);
-  border-radius: 20%;
-  margin: 5px;
-  padding: 5px;
-  background-color: rgb(249, 215, 170);
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.row{ 
-display: flex;
-flex-wrap: wrap;
-
-}
-
