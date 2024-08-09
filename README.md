@@ -1,104 +1,32 @@
-# Proyecto Node.js: Gestión de Personajes y Carga de Archivos
-
-Este proyecto es una aplicación Node.js que utiliza Express y Handlebars para gestionar personajes y permitir la carga de archivos. A continuación, se detalla la estructura del proyecto, su configuración y los pasos para ejecutarlo.
-
-## Estructura del Proyecto
-
-La estructura del proyecto es la siguiente:
-
-proyecto_node/
-│
-├── public/ # Archivos estáticos como CSS, JS e imágenes
-
-│
-├── src/
-
-│ ├── config/ # Configuración de la aplicación
-
-│ │ └── db.js # Configuración y conexión a MongoDB
-
-│ │
-│ ├── controllers/ # Controladores de la aplicación
-
-│ │ └── personajesControlles.js #
-
-│ ├── routes/ # Rutas de la aplicación
-
-│ │ ├── uploadRoutes.js # Rutas para la carga de archivos
-
-│ │ └── personajesRoutes.js # Rutas para la gestión de personajes
-
-│ │
-│ ├── views/ # Plantillas de Handlebars
-
-│ │ ├── layouts/ # Layouts de la aplicación
-
-│ │ │ └── main.hbs # Layout principal
-
-│ │ ├── partials/ # Partials reutilizables
-
-│ │ │ ├── header.hbs # Partial para el encabezado
-│ │ │ └── nav.hbs # Partial para el nav de página
-│ │ │ └── footer.hbs # Partial para el pie de página
-
-│ │ └── index.hbs # Vista principal
-
-│ │
-│ └── app.js # Archivo principal de la aplicación
-
-│
-
-├── .env # Archivo de variables de entorno
-
-├── .gitignore # Archivos y carpetas a ignorar por Git
-
-├── package.json # Dependencias y scripts del proyecto
-
-└── README.md # Este archivo
+Trabajo realizado para UTN Incluyeme
+El trabajo realizado para UTN Incluyeme se centró en la creación de un sitio con Node
+Front con HBS, back con express, la base de datos en NoSql MongoDB y use la api de la nasa que muestra el titulo y un parrafo con una imagen tomada
+por la nasa, la api se llama Imagen del dia de la nasa
 
 
 
-## Instalación
+-La pagina Presenta un Home como presentacion con su nav y su footer.
+-Un crud para crear astronautas que almacena en MondoDB
+-La pagina permite editar el astronauta conserva la imagen cargada desde la creacion del astronauta 
+o permite cambiarla por una nueva mostrando la imagen que ya esta cargada en el form de editar.
+-La pagina de Imagen del dia de la nasa
 
-1. **Clonar el Repositorio:**
+Para correr el proyecto hace falta la orden npm i, para instalar los node_modules
+npm i
+tambien crear una base de datos en mongo, nombre nasaApp y coleccion astronautas
+BD : nasaApp
+coleccion : astronautas
 
-   git clone <URL_DEL_REPOSITORIO>
-   cd proyecto_node
+buscar una llave 'key' en la pagina de la nasa y agregar al campo correspondiente en
+public/scripts/script.js
 
-Instalar Dependencias:
+let api_key = "tu key";
 
-npm install
-
-Configurar variables de Entorno:
-
-Crea un archivo .env en la raíz del proyecto y define las siguientes variables:
-
-MONGODB_URI=mongodb://localhost:27017/tu_base_de_datos
-PORT=3000
-
-Configuración
-Conexión a la Base de Datos
-El archivo src/config/db.js gestiona la conexión a MongoDB. Asegúrate de que la URI de conexión en tu archivo .env esté correctamente configurada.
-
-Motor de Plantillas
-El proyecto utiliza Handlebars como motor de plantillas. Los archivos de plantilla se encuentran en src/views:
-
-Layouts: Plantillas de diseño base como main.hbs.
-Partials: Componentes reutilizables como header.hbs y footer.hbs.
-Vistas: Plantillas específicas para diferentes rutas, como index.hbs.
-Rutas
-Carga de Archivos: La ruta /upload gestiona la carga de archivos. Revisa src/routes/uploadRoutes.js para más detalles.
-Gestión de Personajes: La ruta /personajes maneja las operaciones relacionadas con los personajes. Consulta src/routes/personajesRoutes.js para la implementación.
-Archivos Estáticos
-Los archivos estáticos como CSS, JavaScript e imágenes se colocan en la carpeta public/.
-
-Ejecución
-Para iniciar el servidor, utiliza el siguiente comando:
-
-npm start 
+en .env agregar las variables de la BD
+PORT=El puerto usado en App.js
+MONGODB_URI=mongodb://-Tu localhost:el puerto de tu base de datos-Esta cuando abris el mongoDB antes de conectarte-/nasaApp(nombre de la base de datos)
 
 
-El servidor se ejecutará en el puerto definido en tu archivo .env, por defecto 3000. Accede a la aplicación en http://localhost:3000.
+entonces esta listo para correr el proyecto
+npm run start
 
-Manejo de Errores
-En caso de rutas no encontradas, se renderiza una página de error 404. Asegúrate de revisar los archivos de error en src/views.
