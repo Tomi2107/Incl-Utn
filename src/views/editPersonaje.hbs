@@ -14,8 +14,15 @@
   <input type="text" name="casa" id="casa" value="{{personaje.casa}}" required /><br><br>
   <label>Rol:</label>
   <input type="text" name="rol" id="rol" value="{{personaje.rol}}" required /><br><br>
-  <label>Imagen:</label>
-  <input type="file" name="imagen" /><br><br>
+  
+  {{#if personaje.imagen}}
+   <label>Imagen Actual:</label><br>
+    <img src="/uploads/{{personaje.imagen}}" alt="{{personaje.nombre}}" width="100"><br><br>
+  {{/if}}
+  <input type="hidden" name="imagenActual" value="{{personaje.imagen}}">
+  <label>elegir imagen:</label>
+  <input type="file" name="imagen"/><br><br>
+    
   <button type="submit" class="btn btn-warning">Actualizar</button>
 </form>
  </div>

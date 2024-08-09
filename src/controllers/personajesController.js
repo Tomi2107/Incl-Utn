@@ -48,8 +48,8 @@ const editPersonaje = async (req, res) => {
 
 // Actualizar un personaje
 const updatePersonaje = async (req, res) => {
-  const { nombre, edad, casa, rol } = req.body;
-  const imagenPath = req.file ? req.file.filename : ''; // Ruta de la imagen guardada en el servidor
+  const { nombre, edad, casa, rol, imagenActual } = req.body;
+  const imagenPath = req.file ? req.file.filename : imagenActual; // Ruta de la imagen guardada en el servidor
 
   try {
     await Personaje.findByIdAndUpdate(req.params.id, {
